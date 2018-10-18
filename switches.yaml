@@ -1,0 +1,70 @@
+- platform: mqtt
+  name: "My Bed Light"
+  state_topic: "shadyoak/shadygateway/433toMQTT" # defined by subjectGTWRFtoMQTT in User_config.h
+  command_topic: "shadyoak/shadygateway/commands/MQTTto433/PLSL_180/433_1"
+  payload_on: "5248307"
+  payload_off: "5248316"
+  optimistic: false
+  retain: true
+
+- platform: mqtt
+  name: "Diningroom Light"
+  state_topic: "shadyoak/shadygateway/433toMQTT" # defined by subjectGTWRFtoMQTT in User_config.h
+  command_topic: "shadyoak/shadygateway/commands/MQTTto433/PLSL_174/433_1"
+  payload_on: "5248451"
+  payload_off: "5248460 "
+  optimistic: false
+  retain: true
+
+- platform: mqtt
+  name: "Kitchen Light"
+  state_topic: "shadyoak/shadygateway/433toMQTT" # defined by subjectGTWRFtoMQTT in User_config.h
+  command_topic: "shadyoak/shadygateway/commands/MQTTto433/PLSL_174/433_1"
+  payload_on: "5248771"
+  payload_off: "5248780"
+  optimistic: false
+  retain: true
+
+- platform: mqtt
+  name: "Outlet 4"
+  state_topic: "shadyoak/shadygateway/433toMQTT" # defined by subjectGTWRFtoMQTT in User_config.h
+  command_topic: "shadyoak/shadygateway/commands/MQTTto433/PLSL_174/433_1"
+  payload_on: "5250307"
+  payload_off: "5250316"
+  optimistic: false
+  retain: true
+
+- platform: mqtt
+  name: "Outlet 5"
+  state_topic: "shadyoak/shadygateway/433toMQTT" # defined by subjectGTWRFtoMQTT in User_config.h
+  command_topic: "shadyoak/shadygateway/commands/MQTTto433/PLSL_174/433_1"
+  payload_on: "5256451"
+  payload_off: "5256460"
+  optimistic: false
+  retain: true
+
+
+# #RPI-RF Switches
+# - platform: rpi_rf
+  # gpio: 17
+  # switches:
+    # Luv Shack Light:
+      # pulselength: 180
+      # code_on: 5248307
+      # code_off: 5248316
+    # Diningroom Light:
+      # pulselength: 174
+      # code_on: 5248451
+      # code_off: 5248460
+    # Kitchen Light:
+      # pulselength: 174
+      # code_on: 5248771
+      # code_off: 5248780
+    # Luv Shack Desk Light:
+      # pulselength: 180
+      # code_on: 5250307
+      # code_off: 5250316
+    # Porch Light:
+      # pulselength: 180
+      # code_on: 5256451
+      # code_off: 5256460

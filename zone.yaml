@@ -1,0 +1,17 @@
+name: Home
+latitude: 41.396418
+longitude: -70.542851
+radius: 100
+icon: mdi:home-assistant
+
+name: Walking The Iggy
+latitude: 41.415823
+longitude: -70.547802
+radius: 250
+icon: mdi:walk
+
+name: Animal Hospital
+latitude: 41.386063
+longitude: -70.610564
+radius: 200
+icon: mdi:worker

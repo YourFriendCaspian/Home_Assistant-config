@@ -1,0 +1,137 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: ShadyOak
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret lat
+  longitude: !secret long
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 3
+  # metric for Metric, imperial for Imperial
+  unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: !secret time_zone
+  # Customization file
+  customize: !include customize.yaml
+
+customizer:
+  custom_ui: local
+
+# Show links to resources in log and frontend
+# introduction:
+
+# Enables the frontend
+frontend:
+  themes: !include_dir_merge_named themes
+
+# Enables configuration UI
+config:
+
+http:
+  api_password: !secret http_password
+  ssl_certificate: /home/homeassistant/dehydrated/certs/shadyoak.duckdns.org/fullchain.pem
+  ssl_key: /home/homeassistant/dehydrated/certs/shadyoak.duckdns.org/privkey.pem
+  base_url: shadyoak.duckdns.org:8123
+
+duckdns:
+  domain: shadyoak
+  access_token: 8c488866-90e6-4ea7-93cf-4979ec74604d
+ 
+  
+  # Secrets are defined in the file secrets.yaml
+  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+  # base_url: hassbian.esjtech.win:8123
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+device_tracker:
+  # - platform: asuswrt
+  #   host: 192.168.1.1
+  #   username: !secret asus_username
+  #   password: !secret asus_password
+  #   new_device_defaults:
+  #     track_new_devices: false
+  #     hide_if_away: false
+  - platform: owntracks
+  # - platform: tile
+    # username: !secret tile_username
+    # password: !secret tile_password
+
+
+# Track the sun
+sun:
+
+# Weather prediction
+# sensor:
+  # - platform: yr
+
+# Text to speech
+tts:
+  - platform: google
+
+ifttt:
+  key: !secret ifttt
+
+# Cloud
+cloud:
+
+# media_player:
+  # - platform: kodi
+    # host: 192.168.1.33
+  # - platform: kodi
+    # host: 192.168.1.178
+
+notify:
+  - name: Hangout Alerts
+    platform: hangouts
+    default_conversations:
+      - id: Ugw4pcZ5uL9cKOZsw054AaABAagB1P7pAQ
+  - name: Chrome Push
+    platform: html5
+    gcm_api_key: 'AAAAETMSyjc:APA91bHwDVs4xYaoPxfGVGBrEg80-545y3XVoP5n1UhCAE4rMaJyDn9r0x0Wn7IHhzGCt2y7OskNtGxZCRvxYueBZtqB6gAr9o1c8GJFNe9NGWlM2wMH67kCPY_y-eqPcCyb9WxTQ3_O'
+    gcm_sender_id: '73871313463'
+    
+# mqtt:
+  # broker: hassbian.local
+  # username: !secret mqtt_username
+  # password: !secret mqtt_password
+  # discovery: true
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+sensor: !include sensors.yaml
+switch: !include switches.yaml
+binary_sensor: !include binary_sensor.yaml
+logger: !include logger.yaml
+camera: !include camera.yaml
+zone: !include zone.yaml
+# weather: !include weather.yaml
+# secret: !include secrets.yaml
+
+panel_iframe:
+  ide:
+    title: IDE
+    icon: mdi:code-braces
+    url: 'https://hassbian.local:8080/ide.html'

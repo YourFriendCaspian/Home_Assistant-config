@@ -1,0 +1,43 @@
+#####Basement Multisensor w/ Door Sensor#####
+- platform: mqtt
+  name: 'Basement Motion'
+  state_topic: '0B4F3D/sensor/motion'
+  availability_topic: '0B4F3D/status'
+  payload_available: 'online'
+  payload_not_available: 'offline'
+  device_class: motion
+
+- platform: mqtt
+  name: 'Basement Door'
+  state_topic: '0B4F3D/sensor/door'
+  availability_topic: '0B4F3D/status'
+  payload_available: 'online'
+  payload_not_available: 'offline'
+  device_class: opening
+
+ - platform: mqtt
+   state_topic: "shadycam/motion"
+   name: 'Camera Motion'
+   sensor_class: motion
+
+- platform: mqtt
+  state_topic: "shadycam/motion"
+  name: 'ShadyCam Motion'
+  sensor_class: motion
+
+## ShadyGateway ##
+
+- platform: mqtt
+  name: "ShadyGateway"
+  state_topic: "shadyoak/ShadyGateway/LWT"
+  payload_on: "Online"
+  payload_off: "Offline"
+  device_class: "connectivity"
+
+- platform: mqtt
+  name: 'Motion'
+  state_topic: 'shadyoak/ShadyGateway/MotiontoMQTT'
+#  availability_topic: '0B4F3D/status'
+  payload_available: 'online'
+  payload_not_available: 'offline'
+  device_class: "motion"

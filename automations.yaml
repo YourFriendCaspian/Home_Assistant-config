@@ -1,0 +1,79 @@
+- id: '1537385277863'
+  alias: Set Default Theme For Nighttime
+  trigger:
+  - event: sunset
+    platform: sun
+  condition:
+  - after: sunset
+    before: sunrise
+    condition: sun
+  action:
+  - data:
+      name: midnight_blue
+    service: frontend.set_theme
+  - alias: ''
+    data: {}
+    service: automation.trigger
+- id: '1537385601359'
+  alias: Set Default Theme For Daytime
+  trigger:
+  - event: sunrise
+    platform: sun
+  condition:
+  - after: sunrise
+    before: sunset
+    condition: sun
+  action:
+  - data:
+      name: default
+    service: frontend.set_theme
+  - after: sunrise
+    before: sunset
+    condition: sun
+- id: '1537386483333'
+  alias: Luv Shack Motion Alert
+  trigger:
+  - entity_id: binary_sensor.luv_shack_motion
+    from: 'Off'
+    platform: state
+    to: 'On'
+  condition:
+  - condition: state
+    entity_id: device_tracker.yfc_oneplustech
+    state: Away
+  action:
+  - data:
+      entity_id: switch.luv_shack_desk_light
+    service: switch.turn_on
+- id: '1538029879710'
+  alias: Basement Door
+  trigger:
+  - entity_id: binary_sensor.basement_door
+    from: Closed
+    platform: state
+    to: Open
+  condition: []
+  action:
+  - data:
+      id: Ugw4pcZ5uL9cKOZsw054AaABAagB1P7pAQ
+      name:
+      users:
+      - ESJ Tech Solutions
+      - YourFriend Caspian
+    service: hangouts.send_message
+- id: '1539193111715'
+  alias: Luv Shack Porch
+  trigger:
+  - entity_id: device_tracker.yfc_oneplustech
+    from: Away
+    platform: state
+    to: Home
+  condition:
+  - after: sunset
+    before: sunrise
+    condition: sun
+  action:
+  - data:
+      entity_id: switch.porch_light
+    entity_id: switch.porch_light
+    service: switch.turn_on

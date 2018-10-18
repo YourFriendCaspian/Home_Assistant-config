@@ -1,0 +1,10 @@
+# Example .gitignore file for your config dir
+*
+!*.yaml
+!/
+!/*/
+!README.md
+!.gitignore
+secrets.yaml
+known_devices.yaml
+*.db
