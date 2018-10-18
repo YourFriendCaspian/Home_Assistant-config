@@ -1,0 +1,76 @@
+{
+    "data": {
+        "entries": [
+            {
+                "connection_class": "unknown",
+                "data": {
+                    "email": "yourfriendcaspian@gmail.com",
+                    "refresh_token": "1/XN3n_Qgx08yQ5h0JwVvLGLF4MegyQXwXplU5j7b4n9Y"
+                },
+                "domain": "hangouts",
+                "entry_id": "d82c8c115c7c47b5801beddf63759c84",
+                "source": "user",
+                "title": "yourfriendcaspian@gmail.com",
+                "version": 1
+            },
+            {
+                "connection_class": "unknown",
+                "data": {
+                    "icon": "mdi:walk",
+                    "latitude": 41.415823,
+                    "longitude": -70.547802,
+                    "name": "Walking The Iggy",
+                    "passive": false,
+                    "radius": 300.0
+                },
+                "domain": "zone",
+                "entry_id": "b0cddb92518345f29cd95e17b2a166c7",
+                "source": "user",
+                "title": "Walking The Iggy",
+                "version": 1
+            },
+            {
+                "connection_class": "local_push",
+                "data": {
+                    "broker": "hassbian.local",
+                    "discovery": true,
+                    "password": "Home4242",
+                    "port": 1883,
+                    "username": "yfc"
+                },
+                "domain": "mqtt",
+                "entry_id": "911d8a8e569445bd8f9e7174a8af2f10",
+                "source": "user",
+                "title": "hassbian.local",
+                "version": 1
+            },
+            {
+                "connection_class": "unknown",
+                "data": {
+                    "webhook_id": "86b4dae2c075a474cf47969770f943582416ae7c1b963e88b26f8e348d93acaa"
+                },
+                "domain": "ifttt",
+                "entry_id": "6994ae3e2afa4eb9a0d20faeba2a8d3f",
+                "source": "user",
+                "title": "IFTTT Webhook",
+                "version": 1
+            },
+            {
+                "connection_class": "local_poll",
+                "data": {
+                    "port_mapping": true,
+                    "sensors": true,
+                    "ssdp_description": "http://192.168.1.1:53970/rootDesc.xml",
+                    "udn": "uuid:3ddcd1d3-2380-45f5-b069-b06ebf575010"
+                },
+                "domain": "upnp",
+                "entry_id": "85067428e2bf4c05bd7592d792adad8c",
+                "source": "user",
+                "title": "RT-AC68U",
+                "version": 1
+            }
+        ]
+    },
+    "key": "core.config_entries",
+    "version": 1
+}

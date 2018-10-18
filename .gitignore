@@ -1,8 +1,13 @@
 # Example .gitignore file for your config dir
 *
 !*.yaml
-!/
-!/*/
+!/custom_components/*
+!/custom_components
+!/themes
+!/www
+!/tts/*
+!.*/
+!.*/*/
 !README.md
 !.gitignore
 secrets.yaml

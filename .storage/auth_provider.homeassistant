@@ -1,0 +1,13 @@
+{
+    "data": {
+        "salt": "dd2e98afeddb52b994586c5b49a062da53aa733fa634c3eaf21eeac09f823d4b",
+        "users": [
+            {
+                "password": "JDJiJDEyJGJvZHhJT1IwQmFjaDZsdFIvVXg1SGV0LlBZNU4veXBBQXAydGZhdUVrSXZkQjQvcFR6eWU2",
+                "username": "yfc"
+            }
+        ]
+    },
+    "key": "auth_provider.homeassistant",
+    "version": 1
+}
