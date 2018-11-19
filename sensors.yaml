@@ -1,35 +1,20 @@
-# Time/Date Sensor
+####  Time/Date Sensor  ####
+
 - platform: time_date
-  monitored_conditions:
-    - time
-    - date
+  display_options:
+    - 'time'
+    - 'date'
 
+####  Speedtest  ####
 
-# hide_entity: true
-  # scan_interval: 30000
-  # sensors:
-    # day_after_tomorrow:
-      # friendly_name: 'Day After Tomorrow'
-      # value_template: >-
-        # {{ (as_timestamp(now()) + 172800) | timestamp_custom("%a") }}
-
-# - platform: template
-  # hide_entity: true
-  # scan_interval: 30000
-  # sensors:
-    # day_after_that:
-      # friendly_name: 'Day After That'
-      # value_template: >-
-        # {{ (as_timestamp(now()) + 259200) | timestamp_custom("%a") }}
-
- #sensor 3
 - platform: speedtest
   monitored_conditions:
     - ping
     - download
     - upload
 
-#System Monitor
+####  System Monitor  ####
+
 - platform: systemmonitor
   # name: 'System Monitor'
   resources:
@@ -46,24 +31,7 @@
     - type: processor_use
     - type: load_1m
 
-## Google Geocode Tracker  ##
-# - platform: google_geocode
-  # name: YourFriendCaspian
-  # origin: device_tracker.yfc_oneplustech
-  # options: street, city, postal_code
-  # display_zone: true
-  # gravatar: yourfriendcaspian@gmail.com
-
-## Office Sensor  ##
-# - platform: dht
-  # name: 'Office'
-  # sensor: DHT22
-  # pin: 05
-  # temperature_offset: 2.1
-  # humidity_offset: -3.2
-  # monitored_conditions:
-    # - temperature
-    # - humidity
+####  Office Sensor   ####
 
 - platform: bme280
   name: Ambient
@@ -80,38 +48,12 @@
     - pressure
   scan_interval: 40
 
-## The Luv Shack  ##
-- platform: mqtt
-  name: 'Livingroom Temp'
-  state_topic: 'luvshack/temperature'
-  unit_of_measurement: '°F'
-  value_template: '{{ value_json.temperature }}'
+####  Master Bedroom  ####
 
-- platform: mqtt
-  name: 'Livingroom Humidity'
-  state_topic: 'luvshack/humidity'
-  unit_of_measurement: '%'
-  value_template: '{{ value_json.humidity }}'
 
-## Studio  ##
-- platform: mqtt
-  name: 'Studio Temp'
-  state_topic: 'yfc/Studio/Temp'
-  unit_of_measurement: '°F'
-  value_template: '{{ value_json.temperature | round(1) }}'
 
-- platform: mqtt
-  name: 'Studio Humidity'
-  state_topic: 'yfc/Studio/Humidity'
-  unit_of_measurement: '%'
-  value_template: '{{ value_json.humidity | round(1) }}'
 
-  # - platform: mqtt
-  # name: 'Luv Shack Motion'
-  # state_topic: 'luvshack/pisensor'
-  # value_template: '{{ value_json.motion }}'
-
- ###Bruh MultiSensor####
+####  Bruh MultiSensor  ####
 
 - platform: mqtt
   name: 'Humidity'
@@ -143,7 +85,8 @@
   state_topic: 'bruh/livingroom'
   value_template: '{{ value_json.motion }}'
 
-#####Basement Multisensor w/ Door Sensor######
+####  Basement Multisensor w/ Door Sensor  ####
+
 - platform: mqtt
   name: 'Basement Temp'
   state_topic: '0B4F3D/sensor/temperature'
@@ -168,28 +111,37 @@
   payload_available: 'online'
   payload_not_available: 'offline'
 
-## ShadyGateway ##
+
+####  BLE RPI Occupency Sensors "Monitor"  ####
 
 - platform: mqtt
-  name: "Temp"
-  state_topic: "shadyoak/ShadyGateway/DHTtoMQTT/dht1/temp"
-  unit_of_measurement: "°F"
-  value_template: '{{ value | round(2)  }}'
+  state_topic: 'shadyhome/frontdoor/94:65:2D:42:A9:EE'
+  value_template: '{{ value_json.confidence }}'
+  unit_of_measurement: '%'
+  name: 'Front Door'
 
 - platform: mqtt
-  name: "Humidity"
-  state_topic: "shadyoak/ShadyGateway/DHTtoMQTT/dht1/hum"
-  unit_of_measurement: "%"
-  value_template: '{{ value | round(2)  }}'
+  state_topic: 'shadyhome/office/94:65:2D:42:A9:EE'
+  value_template: '{{ value_json.confidence }}'
+  unit_of_measurement: '%'
+  name: 'Office'
 
-# - platform: template
-  # mqtt_real_feel:
-  # friendly_name: "Real Feel"
-  # value_template: '{{ (((-42.379 + (2.04901523*(((states.mqtt_rf_temperature.state|float)*1.8)+32)) + (10.14333127*(states.mqtt_rf_humidity.state|float)) - (0.22475541*(((states.mqtt_rf_temperature.state|float)*1.8)+32)*(states.mqtt_rf_humidity.state|float)) - (6.83783 * (10**(-3))*((((states.mqtt_rf_temperature.state|float)*1.8)+32)**2)) - (5.481717 * (10**(-2))*((states.mqtt_rf_humidity.state|float)**2)) + (1.22874 * (10**(-3))*((((states.mqtt_rf_temperature.state|float)*1.8)+32)**2*(states.mqtt_rf_humidity.state|float))) + (8.5282 * (10**(-4))*((((states.mqtt_rf_temperature.state|float)*1.8)+32)*(states.mqtt_rf_humidity.state|float)**2)) - (1.99 * (10**(-6))*((((states.mqtt_rf_temperature.state|float)*1.8)+32)**2)*((states.mqtt_rf_humidity.state|float)**2)))-32)/1.8)|round(2) }}'
-  # unit_of_measurement: "°F"
+- platform: min_max
+  name: "YFC Occupancy Confidence"
+  type: max
+  round_digits: 0
+  entity_ids:
+    - sensor.office
+    - sensor.front_door
 
-        
-## Weather ##
+####  RF Receiver Sensor  ####
+
+- platform: mqtt
+  state_topic: "sensors/rf/receiver"
+  name: "RF Receiver"
+
+
+####  Weather  ####
 
 - platform: moon
 
@@ -218,3 +170,86 @@
     - wind_mph
     - wind_1d_mph
     - alerts
+
+
+# - platform: dht
+  # name: 'Office'
+  # sensor: DHT22
+  # pin: 05
+  # temperature_offset: 2.1
+  # humidity_offset: -3.2
+  # monitored_conditions:
+    # - temperature
+    # - humidity
+
+####   The Luv Shack    ####
+
+# - platform: mqtt
+#   name: 'Livingroom Temp'
+#   state_topic: 'luvshack/temperature'
+#   unit_of_measurement: '°F'
+#   value_template: '{{ value_json.temperature }}'
+
+# - platform: mqtt
+#   name: 'Livingroom Humidity'
+#   state_topic: 'luvshack/humidity'
+#   unit_of_measurement: '%'
+#   value_template: '{{ value_json.humidity }}'
+
+####   Studio   ####
+
+# - platform: mqtt
+#   name: 'Studio Temp'
+#   state_topic: 'yfc/Studio/Temp'
+#   unit_of_measurement: '°F'
+#   value_template: '{{ value_json.temperature | round(1) }}'
+
+# - platform: mqtt
+#   name: 'Studio Humidity'
+#   state_topic: 'yfc/Studio/Humidity'
+#   unit_of_measurement: '%'
+#   value_template: '{{ value_json.humidity | round(1) }}'
+
+  # - platform: mqtt
+  # name: 'Luv Shack Motion'
+  # state_topic: 'luvshack/pisensor'
+  # value_template: '{{ value_json.motion }}'
+  
+####  ShadyCam Motion  ####
+
+# - platform: mqtt
+#   name: "ShadyCam Motion"
+#   state_topic: "shadyhome/shadycam/motion"
+#   value_template: '{{ value_json.status }}'
+#   payload_on: "Motion Detected"
+#   payload_off: "No Motion"
+#   qos: 0
+
+
+####  ShadyGateway  ####
+
+# - platform: mqtt
+#   name: "Temp"
+#   state_topic: "shadyoak/ShadyGateway/DHTtoMQTT/dht1/temp"
+#   unit_of_measurement: "°F"
+#   value_template: '{{ value | round(2)  }}'
+
+# - platform: mqtt
+#   name: "Humidity"
+#   state_topic: "shadyoak/ShadyGateway/DHTtoMQTT/dht1/hum"
+#   unit_of_measurement: "%"
+#   value_template: '{{ value | round(2)  }}'
+
+# - platform: template
+  # mqtt_real_feel:
+  # friendly_name: "Real Feel"
+  # value_template: '{{ (((-42.379 + (2.04901523*(((states.mqtt_rf_temperature.state|float)*1.8)+32)) + (10.14333127*(states.mqtt_rf_humidity.state|float)) - (0.22475541*(((states.mqtt_rf_temperature.state|float)*1.8)+32)*(states.mqtt_rf_humidity.state|float)) - (6.83783 * (10**(-3))*((((states.mqtt_rf_temperature.state|float)*1.8)+32)**2)) - (5.481717 * (10**(-2))*((states.mqtt_rf_humidity.state|float)**2)) + (1.22874 * (10**(-3))*((((states.mqtt_rf_temperature.state|float)*1.8)+32)**2*(states.mqtt_rf_humidity.state|float))) + (8.5282 * (10**(-4))*((((states.mqtt_rf_temperature.state|float)*1.8)+32)*(states.mqtt_rf_humidity.state|float)**2)) - (1.99 * (10**(-6))*((((states.mqtt_rf_temperature.state|float)*1.8)+32)**2)*((states.mqtt_rf_humidity.state|float)**2)))-32)/1.8)|round(2) }}'
+  # unit_of_measurement: "°F"
+
+## Google Geocode Tracker  ##
+# - platform: google_geocode
+  # name: YourFriendCaspian
+  # origin: device_tracker.yfc_oneplustech
+  # options: street, city, postal_code
+  # display_zone: true
+  # gravatar: yourfriendcaspian@gmail.com

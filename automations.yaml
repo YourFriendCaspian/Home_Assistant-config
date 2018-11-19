@@ -3,33 +3,21 @@
   trigger:
   - event: sunset
     platform: sun
-  condition:
-  - after: sunset
-    before: sunrise
-    condition: sun
+  condition: []
   action:
   - data:
       name: midnight_blue
     service: frontend.set_theme
-  - alias: ''
-    data: {}
-    service: automation.trigger
 - id: '1537385601359'
   alias: Set Default Theme For Daytime
   trigger:
   - event: sunrise
     platform: sun
-  condition:
-  - after: sunrise
-    before: sunset
-    condition: sun
+  condition: []
   action:
   - data:
       name: default
     service: frontend.set_theme
-  - after: sunrise
-    before: sunset
-    condition: sun
 - id: '1537386483333'
   alias: Luv Shack Motion Alert
   trigger:
@@ -77,3 +65,24 @@
       entity_id: switch.porch_light
     entity_id: switch.porch_light
     service: switch.turn_on
+- id: '1541790263598'
+  alias: Diningroom Light YFC
+  trigger:
+  - entity_id: device_tracker.yfc_oneplustech
+    event: enter
+    platform: zone
+    zone: zone.home
+  condition:
+  - after: sunset
+    before: sunrise
+    condition: sun
+  action:
+  - alias: ''
+    data:
+      entity_id: switch.diningroom_light
+    service: switch.turn_on
+  - data:
+      message: Im Home
+      target: OnePlusTech
+      title: Lights On
+    service: notify.chrome_push

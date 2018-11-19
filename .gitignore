@@ -13,3 +13,5 @@
 secrets.yaml
 known_devices.yaml
 *.db
+
+# When ready to update issue   git push -u origin master

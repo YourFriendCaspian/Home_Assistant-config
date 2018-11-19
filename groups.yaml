@@ -9,31 +9,35 @@ default_view:
     - group.date_card
     - group.daily_forecast
 
-livingroom_view:
+main_view:
   name: The Main House
   view: yes
   entities:
     - group.livingroom_card
     - group.office_temp_card
+    - group.master_bedroom_card
     - group.livingroom_switches
     - group.livingroom_cam_card
-    
-basement_view:
-  name: The Basement
+
+
+extended_view:
+  name: Extended House
   view: yes
   entities:
     - group.basement_card
+    - group.studio_card
 
 myroom_view:
   name: YourFriendCaspian
   view: yes
   entities:
     - group.yfc_tracker_card
+    - group.parents_tracker_card
     - media_player.kodi_thewingirllocal
     - group.myroom_card
     - group.my_lights
+    - camera.shadycam
 
-    
 system_status_view:
   name: System Status
   view: yes
@@ -46,20 +50,21 @@ system_status_view:
 
 System Status:
   entities:
+    - sensor.last_boot
     - sensor.processor_use
     - sensor.load_1m
     - sensor.memory_use_percent
     - sensor.disk_use_percent_
     - sensor.disk_use_percent_home
-    - sensor.last_boot
-    - sensor.network_out_eth0
     - sensor.network_in_eth0
+    - sensor.network_out_eth0
 
 Speedtest:
   entities:
     - sensor.speedtest_ping
     - sensor.speedtest_download
     - sensor.speedtest_upload
+    - sensor.update_speedtest
 
 time_card:
   name: 'Time'
@@ -100,6 +105,12 @@ basement_card:
     - binary_sensor.basement_motion
     - binary_sensor.basement_door
 
+studio_card:
+  name: 'Studio'
+  entities:
+    - sensor.temperatureandhumidity_4_5
+    - sensor.temperatureandhumidity_4_4
+
 livingroom_switches:
   name: 'Lights'
   control: hidden
@@ -110,30 +121,47 @@ livingroom_switches:
 livingroom_cam_card:
   name: 'Livingroom Camera'
   entities:
-    - camera.livingroom_camera
-    - binary_sensor.camera_motion
+    - camera.livingroom_cam
+    - binary_sensor.shadycam_binary_motion
+    - sensor.shadycam_motion
 
 my_lights:
   name: 'Lights'
   control: hidden
   entities:
     - switch.my_bed_light
+
+outlets:
+  name: 'Extra Outlets'
+  control: hidden
+  entities:
     - switch.outlet_4
     - switch.outlet_5
 
-myroom_card:
-  name: 'My Room Sensors'
+master_bedroom_card:
+  name: 'Master Bedroom'
   entities:
-    - binary_sensor.shadygateway
-    - sensor.temp
-    - sensor.humidity
-    - sensor.real_feel
-    - binary_sensor.motion
+    - sensor.temperatureandhumidity_1_1
+    - sensor.temperatureandhumidity_1_0
 
 yfc_tracker_card:
   name: 'YourFriendCaspian'
-  entities: 
+  entities:
     - device_tracker.yfc_oneplustech
+    - sensor.front_door
+    - sensor.office
+    - sensor.yfc_occupancy_confidence
+
+rf_receiver_card:
+  name: 'RF Receiver'
+  entities:
+    - sensor.rf_receiver
+
+parents_tracker_card:
+  name: 'Parents'
+  entities:
+    - device_tracker.jeannes_phone
+    - device_tracker.dougs_phone
 
 Daily Forecast:
   entities:

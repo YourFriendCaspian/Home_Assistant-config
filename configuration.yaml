@@ -74,9 +74,9 @@ device_tracker:
   #     track_new_devices: false
   #     hide_if_away: false
   - platform: owntracks
-  # - platform: tile
-    # username: !secret tile_username
-    # password: !secret tile_password
+  - platform: tile
+    username: !secret tile_username
+    password: !secret tile_password
 
 
 # Track the sun
@@ -96,9 +96,18 @@ ifttt:
 # Cloud
 cloud:
 
-# media_player:
-  # - platform: kodi
-    # host: 192.168.1.33
+alexa:
+
+mysensors:
+  gateways:
+    - device: 'hassbian.local'
+      persistence_file: '/home/homeassistant/.homeassistant/mysensors.json'
+      tcp_port: 5003
+  version: '2.3'
+
+media_player:
+  - platform: kodi
+    host: 192.168.1.79
   # - platform: kodi
     # host: 192.168.1.178
 
@@ -134,4 +143,4 @@ panel_iframe:
   ide:
     title: IDE
     icon: mdi:code-braces
-    url: 'https://hassbian.local:8080/ide.html'
+    url: 'https://hassbian.local:8181/ide.html'
