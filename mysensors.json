@@ -1,0 +1,39 @@
+{
+    "0": {
+        "battery_level": 0,
+        "type": 18,
+        "protocol_version": "2.3.0",
+        "children": {},
+        "sketch_name": null,
+        "sketch_version": null,
+        "sensor_id": 0,
+        "heartbeat": 0
+    },
+    "1": {
+        "battery_level": 0,
+        "type": 17,
+        "protocol_version": "2.3.0",
+        "children": {
+            "0": {
+                "description": "",
+                "values": {
+                    "1": "38.0"
+                },
+                "type": 7,
+                "id": 0
+            },
+            "1": {
+                "description": "",
+                "values": {
+                    "0": "69.8"
+                },
+                "type": 6,
+                "id": 1
+            }
+        },
+        "sketch_name": "TemperatureAndHumidity",
+        "sketch_version": "1.1",
+        "sensor_id": 1,
+        "heartbeat": 0
+    }
+}

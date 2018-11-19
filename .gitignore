@@ -1,15 +1,20 @@
 # Example .gitignore file for your config dir
 *
 !*.yaml
+!*.json
+!*.conf
+!*.sh
+!*.save
 !/custom_components/*
 !/custom_components
-!/themes
+!/themes/*
 !/www
 !/tts/*
 !.*/
 !.*/*/
 !README.md
 !.gitignore
+!mysensors.json
 secrets.yaml
 known_devices.yaml
 *.db
