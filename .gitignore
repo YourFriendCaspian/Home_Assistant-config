@@ -1,0 +1,25 @@
+## When ready to update issue   git push -u origin master ##
+
+# Whitelisted files/folders with ! #
+!*.yaml
+!/custom_components/*
+!/custom_components
+!/themes
+!/www
+!/tts/*
+!.*/
+!.*/*/
+!.git/
+!README.md
+!.gitignore
+
+# Ignored Files #
+ip_bans.yaml
+secrets.yaml
+known_devices.yaml
+*.db
+
+# Ignored Folders. #
+.storage
+.cloud
+.google.token

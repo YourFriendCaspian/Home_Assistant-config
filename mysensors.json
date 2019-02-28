@@ -1,0 +1,319 @@
+{
+    "0": {
+        "protocol_version": "2.3.2-alpha",
+        "sketch_name": null,
+        "heartbeat": 0,
+        "children": {},
+        "type": 18,
+        "sensor_id": 0,
+        "battery_level": 0,
+        "sketch_version": null
+    },
+    "1": {
+        "protocol_version": "2.3.0",
+        "sketch_name": "TemperatureAndHumidity",
+        "heartbeat": 0,
+        "children": {
+            "0": {
+                "description": "",
+                "type": 7,
+                "values": {
+                    "1": "42.0"
+                },
+                "id": 0
+            },
+            "1": {
+                "description": "",
+                "type": 6,
+                "values": {
+                    "0": "68.0"
+                },
+                "id": 1
+            }
+        },
+        "type": 17,
+        "sensor_id": 1,
+        "battery_level": 0,
+        "sketch_version": "1.1"
+    },
+    "4": {
+        "protocol_version": "2.3.0",
+        "sketch_name": "TemperatureAndHumidity",
+        "heartbeat": 0,
+        "children": {
+            "4": {
+                "description": "",
+                "type": 7,
+                "values": {
+                    "1": "30.0"
+                },
+                "id": 4
+            },
+            "5": {
+                "description": "",
+                "type": 6,
+                "values": {
+                    "0": "60.8"
+                },
+                "id": 5
+            }
+        },
+        "type": 17,
+        "sensor_id": 4,
+        "battery_level": 0,
+        "sketch_version": "1.1"
+    },
+    "5": {
+        "protocol_version": "2.3.1",
+        "sketch_name": "Air Quality Sensor",
+        "heartbeat": 0,
+        "children": {
+            "0": {
+                "description": "",
+                "type": 22,
+                "values": {},
+                "id": 0
+            },
+            "6": {
+                "description": "",
+                "type": 1,
+                "values": {},
+                "id": 6
+            },
+            "7": {
+                "description": "",
+                "type": 7,
+                "values": {},
+                "id": 7
+            },
+            "8": {
+                "description": "",
+                "type": 6,
+                "values": {},
+                "id": 8
+            },
+            "9": {
+                "description": "",
+                "type": 16,
+                "values": {},
+                "id": 9
+            },
+            "10": {
+                "description": "",
+                "type": 22,
+                "values": {},
+                "id": 10
+            }
+        },
+        "type": 17,
+        "sensor_id": 5,
+        "battery_level": 0,
+        "sketch_version": "1.0"
+    },
+    "6": {
+        "protocol_version": "2.3.1",
+        "sketch_name": "Soil Moisture Sensor Reve",
+        "heartbeat": 0,
+        "children": {
+            "0": {
+                "description": "",
+                "type": 35,
+                "values": {
+                    "37": "2"
+                },
+                "id": 0
+            }
+        },
+        "type": 17,
+        "sensor_id": 6,
+        "battery_level": 0,
+        "sketch_version": "1.0"
+    },
+    "7": {
+        "protocol_version": "1.4",
+        "sketch_name": null,
+        "heartbeat": 0,
+        "children": {},
+        "type": null,
+        "sensor_id": 7,
+        "battery_level": 0,
+        "sketch_version": null
+    },
+    "8": {
+        "protocol_version": "1.4",
+        "sketch_name": null,
+        "heartbeat": 0,
+        "children": {},
+        "type": null,
+        "sensor_id": 8,
+        "battery_level": 0,
+        "sketch_version": null
+    },
+    "9": {
+        "protocol_version": "1.4",
+        "sketch_name": null,
+        "heartbeat": 0,
+        "children": {},
+        "type": null,
+        "sensor_id": 9,
+        "battery_level": 0,
+        "sketch_version": null
+    },
+    "10": {
+        "protocol_version": "1.4",
+        "sketch_name": null,
+        "heartbeat": 0,
+        "children": {},
+        "type": null,
+        "sensor_id": 10,
+        "battery_level": 0,
+        "sketch_version": null
+    },
+    "11": {
+        "protocol_version": "1.4",
+        "sketch_name": null,
+        "heartbeat": 0,
+        "children": {},
+        "type": null,
+        "sensor_id": 11,
+        "battery_level": 0,
+        "sketch_version": null
+    },
+    "12": {
+        "protocol_version": "1.4",
+        "sketch_name": null,
+        "heartbeat": 0,
+        "children": {},
+        "type": null,
+        "sensor_id": 12,
+        "battery_level": 0,
+        "sketch_version": null
+    },
+    "13": {
+        "protocol_version": "1.4",
+        "sketch_name": null,
+        "heartbeat": 0,
+        "children": {},
+        "type": null,
+        "sensor_id": 13,
+        "battery_level": 0,
+        "sketch_version": null
+    },
+    "14": {
+        "protocol_version": "1.4",
+        "sketch_name": null,
+        "heartbeat": 0,
+        "children": {},
+        "type": null,
+        "sensor_id": 14,
+        "battery_level": 0,
+        "sketch_version": null
+    },
+    "15": {
+        "protocol_version": "1.4",
+        "sketch_name": null,
+        "heartbeat": 0,
+        "children": {},
+        "type": null,
+        "sensor_id": 15,
+        "battery_level": 0,
+        "sketch_version": null
+    },
+    "16": {
+        "protocol_version": "1.4",
+        "sketch_name": null,
+        "heartbeat": 0,
+        "children": {},
+        "type": null,
+        "sensor_id": 16,
+        "battery_level": 0,
+        "sketch_version": null
+    },
+    "17": {
+        "protocol_version": "1.4",
+        "sketch_name": null,
+        "heartbeat": 0,
+        "children": {},
+        "type": null,
+        "sensor_id": 17,
+        "battery_level": 0,
+        "sketch_version": null
+    },
+    "18": {
+        "protocol_version": "1.4",
+        "sketch_name": null,
+        "heartbeat": 0,
+        "children": {},
+        "type": null,
+        "sensor_id": 18,
+        "battery_level": 0,
+        "sketch_version": null
+    },
+    "19": {
+        "protocol_version": "1.4",
+        "sketch_name": null,
+        "heartbeat": 0,
+        "children": {},
+        "type": null,
+        "sensor_id": 19,
+        "battery_level": 0,
+        "sketch_version": null
+    },
+    "20": {
+        "protocol_version": "1.4",
+        "sketch_name": null,
+        "heartbeat": 0,
+        "children": {},
+        "type": null,
+        "sensor_id": 20,
+        "battery_level": 0,
+        "sketch_version": null
+    },
+    "21": {
+        "protocol_version": "1.4",
+        "sketch_name": null,
+        "heartbeat": 0,
+        "children": {},
+        "type": null,
+        "sensor_id": 21,
+        "battery_level": 0,
+        "sketch_version": null
+    },
+    "22": {
+        "protocol_version": "1.4",
+        "sketch_name": null,
+        "heartbeat": 0,
+        "children": {},
+        "type": null,
+        "sensor_id": 22,
+        "battery_level": 0,
+        "sketch_version": null
+    },
+    "23": {
+        "protocol_version": "2.3.1",
+        "sketch_name": "Binary Sensor",
+        "heartbeat": 0,
+        "children": {
+            "3": {
+                "description": "",
+                "type": 0,
+                "values": {
+                    "16": "1"
+                },
+                "id": 3
+            },
+            "4": {
+                "description": "",
+                "type": 0,
+                "values": {
+                    "16": "1"
+                },
+                "id": 4
+            }
+        },
+        "type": 17,
+        "sensor_id": 23,
+        "battery_level": 0,
+        "sketch_version": "1.0"
+    }
+}

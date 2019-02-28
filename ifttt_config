@@ -1,0 +1,9 @@
+Created config for IFTTT Webhook
+To send events to Home Assistant, you will need to use the "Make a web request" action from the IFTTT Webhook applet.
+Fill in the following info:
+
+URL: http://192.168.1.142:8123/api/webhook/632813be01787e8b846bc4227b09ab2fb6032c110ac39a46562fc2cfbc7df0c7
+Method: POST
+Content Type: application/json 
+
+See the documentation on how to configure automations to handle incoming data.

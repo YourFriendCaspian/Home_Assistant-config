@@ -1,0 +1,28 @@
+default: info
+logs:
+
+# Error
+  homeassistant.core: error
+
+# info
+  homeassistant.bootstrap: info
+  homeassistant.components.websocket_api: info
+  homeassistant.helpers.script: info
+
+# Debug
+  homeassistant.components.mqtt: debug
+  homeassistant.components.binary_sensor: debug
+  homeassistant.components.sensor: debug
+  homeassistant.components.switch: debug
+  homeassistant.components.device_tracker: debug
+  homeassistant.components.media_player: debug
+  homeassistant.components.camera: debug
+  homeassistant.components.api: debug
+  homeassistant.components.automation: debug
+  homeassistant.components.mysensors: debug
+  mysensors: debug
+
+# warn
+  homeassistant.components.alarm_control_panel: warn
+  homeassistant.components.alert: warn
+  homeassistant.components.http: warn

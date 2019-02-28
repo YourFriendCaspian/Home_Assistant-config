@@ -1,0 +1,132 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Shady Oak
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret lat
+  longitude: !secret long
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 3
+  # metric for Metric, imperial for Imperial
+  unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: !secret time_zone
+  # Customization file
+  customize: !include customize.yaml
+
+customizer:
+  custom_ui: local
+  
+# Show links to resources in log and frontend
+introduction:
+
+# Enables the frontend
+frontend:
+  themes: !include_dir_merge_named themes
+
+# Enables configuration UI
+config:
+
+http:
+  api_password: !secret http_password
+  ssl_certificate: /home/homeassistant/dehydrated/certs/shadyoak.duckdns.org/fullchain.pem
+  ssl_key: /home/homeassistant/dehydrated/certs/shadyoak.duckdns.org/privkey.pem
+  base_url: shadyoak.duckdns.org:8123
+#  ssl_certificate: /etc/letsencrypt/live/home.esjtech.win/fullchain.pem
+#  ssl_key: /etc/letsencrypt/live/home.esjtech.win/privkey.pem
+#  base_url: home.esjtech.win:8123
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+# http:
+#   base_url: example.duckdns.org:8123
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+device_tracker:
+  # - platform: asuswrt
+  #   host: 192.168.1.1
+  #   username: !secret asus_username
+  #   password: !secret asus_password
+  #   new_device_defaults:
+  #     track_new_devices: false
+  #     hide_if_away: false
+  - platform: owntracks
+  - platform: tile
+    username: !secret tile_username
+    password: !secret tile_password
+
+# Track the sun
+sun:
+
+# Allow diagnosing system problems
+system_health:
+
+ifttt:
+  key: !secret ifttt
+
+# Text to speech
+tts:
+  - platform: google
+
+# Cloud
+cloud:
+
+alexa:
+  smart_home:
+
+emulated_hue:
+
+mysensors:
+  gateways:
+    - device: '/dev/ttyUSB020'
+      persistence_file: '/home/homeassistant/.homeassistant/mysensors.json'
+  version: '2.0'
+    
+mqtt:
+  broker: 192.168.1.142
+  port: 1883
+  username: !secret mqtt_username
+  password: !secret mqtt_password
+  discovery: true
+  discovery_prefix: shadyoak
+ 
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+sensor: !include sensors.yaml
+switch: !include switches.yaml
+binary_sensor: !include binary_sensor.yaml
+logger: !include logger.yaml
+camera: !include camera.yaml
+zone: !include zone.yaml
+
+panel_iframe:
+  ide:
+    title: Web Terminal
+    icon: mdi:code-braces
+    url: 'https://shadyoak.duckdns.org:4200'
+  manager:
+    title: HA Manager
+    icon: mdi:code-braces
+    url: https://shadyoak.duckdns.org:9999

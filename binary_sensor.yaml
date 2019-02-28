@@ -1,0 +1,73 @@
+- platform: rpi_gpio
+  ports:
+    17: Office Motion
+
+####  Basement Multisensor w/ Door Sensor  ####
+
+#- platform: mqtt
+  #name: 'Basement Motion'
+  #state_topic: 'basement/binary_sensor/basement_motion/state'
+  #device_class: motion
+  #availability_topic: 'basement/status'
+  #payload_available: 'online'
+  #payload_not_available: 'offline'
+
+#- platform: mqtt
+  #name: 'Basement Door'
+  #state_topic: 'basement/binary_sensor/basement_door/state'
+  #device_class: opening
+  #availability_topic: 'basement/status'
+  #payload_available: 'online'
+  #payload_not_available: 'offline'
+
+#####  Livingroom Sensors  ####
+
+#- platform: mqtt
+  #name: "Livingroom Motion"
+  #state_topic: "livingroom/binary_sensor/livingroom_motion/state"
+  #device_class: motion
+  #availability_topic: 'livingroom/status'
+  #payload_available: 'online'
+  #payload_not_available: 'offline'
+
+- platform: mqtt
+  name: "YFC's Home"
+  state_topic: "livingroom/binary_sensor/oneplusyfc/state"
+  device_class: presence
+  availability_topic: 'livingroom/status'
+  payload_available: 'online'
+  payload_not_available: 'offline'
+
+- platform: mqtt
+  name: "Jeanne's Home"
+  state_topic: "livingroom/binary_sensor/jeannes_phone/state"
+  device_class: presence
+  availability_topic: 'livingroom/status'
+  payload_available: 'online'
+  payload_not_available: 'offline'
+
+- platform: mqtt
+  name: "Doug's Home"
+  state_topic: "livingroom/binary_sensor/dougs_phone/state"
+  device_class: presence
+  availability_topic: 'livingroom/status'
+  payload_available: 'online'
+  payload_not_available: 'offline'
+
+
+####  ShadyGateway  ####
+
+# - platform: mqtt
+#   name: 'ShadyGateway'
+#   state_topic: 'shadyoak/ShadyGateway/LWT'
+#   payload_on: 'online'
+#   payload_off: 'offline'
+#   device_class: connectivity
+
+# - platform: mqtt
+#   name: 'Motion'
+#   state_topic: 'shadyoak/ShadyGateway/MotiontoMQTT'
+# #  availability_topic: '0B4F3D/status'
+#   payload_available: 'online'
+#   payload_not_available: 'offline'
+#   device_class: motion

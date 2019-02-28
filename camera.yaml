@@ -1,0 +1,17 @@
+#- platform: mjpeg
+#  mjpeg_url: https://hassbian.local:8081
+#  name: Livingroom Camera
+
+
+#- platform: mjpeg
+  #mjpeg_url: http://192.168.1.91:8081
+  #name: 'Livingroom Cam'
+
+- platform: mjpeg
+  mjpeg_url: http://192.168.1.79:8083/axis-cgi/mjpg/video.cgi?cameraid=1566356384&user=yfc&pwd=4242
+#  mjpeg_url: http://192.168.1.124:8083/live?cameraId=1566356384
+  name: 'ShadyCam'
+  
+- platform: generic
+  still_image_url: https://radblast.wunderground.com/cgi-bin/radar/WUNIDS_map?station=BOX&brand=wui&num=10&delay=75&type=N0R&frame=0&scale=0.5&noclutter=0&showstorms=0&mapx=400&mapy=240&centerx=295&centery=97&transx=-105&transy=-143&showlabels=1&severe=0&rainsnow=0&lightning=0&smooth=1&rand=25590392&lat=0&lon=0&label=you
+  name: The Cape and Islands

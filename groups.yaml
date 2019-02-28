@@ -1,0 +1,194 @@
+###Views####
+default_view:
+  name: The Weather
+  view: yes
+  entities:
+    - group.time_card
+    - group.weather_overview
+    - camera.the_cape_and_islands
+    - group.date_card
+    - group.daily_forecast
+
+main_view:
+  name: The Main House
+  view: yes
+  entities:
+    - group.livingroom_card
+    - group.office_card
+    - group.master_bedroom_card
+    - group.livingroom_switches
+    - binary_sensor.jeannes_home_2
+    - binary_sensor.dougs_home_2
+
+
+extended_view:
+  name: Extended House
+  view: yes
+  entities:
+    - group.basement_card
+    - group.studio_card
+
+myroom_view:
+  name: YourFriendCaspian
+  view: yes
+  entities:
+    - group.yfc_tracker_card
+    - group.parents_tracker_card
+    - media_player.kodi_thewingirllocal
+    - group.myroom_card
+    - group.my_lights
+    - camera.shadycam
+
+system_status_view:
+  name: System Status
+  view: yes
+  entities:
+    - group.system_status
+    - group.speedtest
+    - group.outlets
+
+####Groups####
+
+System Status:
+  entities:
+    - sensor.last_boot
+    - sensor.processor_use
+    - sensor.load_1m
+    - sensor.memory_use_percent
+    - sensor.disk_use_percent
+    - sensor.disk_use_percent_home
+    - sensor.network_in_eth0
+    - sensor.network_out_eth0
+
+Speedtest:
+  entities:
+    - sensor.speedtest_ping
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+    - sensor.update_speedtest
+
+time_card:
+  name: 'Time'
+  entities:
+    - sensor.time
+    - sun.sun
+
+date_card:
+  name: 'Date'
+  entities:
+    - sensor.date
+    - sensor.moon
+
+office_card:
+  name: 'Office'
+  entities:
+    - sensor.ambient_temperature
+    - sensor.ambient_humidity
+    - sensor.ambient_pressure
+    - binary_sensor.office_motion
+
+livingroom_card:
+  # control: hidden
+  # view: no
+  name: 'Livingroom'
+  entities:
+    - sensor.livingroom_temp
+    - sensor.livingroom_humidity
+    - sensor.livingroom_light
+    - binary_sensor.livingroom_motion
+    - sensor.livingroom_wifi
+    - switch.livingroom_restart
+
+basement_card:
+  name: 'Basement'
+  entities:
+    - sensor.basement_temp
+    - sensor.basement_humidity
+    - sensor.basement_light
+    - binary_sensor.basement_motion
+    - binary_sensor.basement_door
+    - sensor.basement_wifi
+    - switch.basement_restart
+
+studio_card:
+  name: 'Studio'
+  entities:
+    - sensor.temperatureandhumidity_4_4
+    - sensor.temperatureandhumidity_4_5
+    - sensor.soil_moisture_sensor_reve_6_0
+
+livingroom_switches:
+  name: 'Lights'
+  control: hidden
+  entities:
+    - switch.diningroom_light
+    - switch.kitchen_light
+
+my_lights:
+  name: 'Lights'
+  control: hidden
+  entities:
+    - switch.desk_light
+    - switch.bed_light
+
+outlets:
+  name: 'Extra Outlets'
+  control: hidden
+  entities:
+    - switch.outlet_5
+
+master_bedroom_card:
+  name: 'Master Bedroom'
+  entities:
+    - sensor.temperatureandhumidity_1_1
+    - sensor.temperatureandhumidity_1_0
+
+yfc_tracker_card:
+  name: 'YourFriendCaspian'
+  entities:
+    - device_tracker.yfc_oneplustech
+    - binary_sensor.yfcs_home
+    - sensor.oneplustech_battery
+    - sensor.oneplustech_light_sensor
+    - sensor.oneplustech_step_counter
+#    - sensor.front_door
+#    - sensor.office
+#    - sensor.yfc_occupancy_confidence
+
+rf_receiver_card:
+  name: 'RF Receiver'
+  entities:
+    - sensor.rf_receiver
+
+parents_tracker_card:
+  name: 'Parents'
+  entities:
+    - device_tracker.jeannes_phone
+    - device_tracker.dougs_phone
+
+Daily Forecast:
+  entities:
+    - sensor.pws_weather_1d
+    - sensor.pws_weather_1n
+    - sensor.pws_weather_2d
+    - sensor.pws_weather_2n
+    - sensor.pws_weather_3d
+    - sensor.pws_weather_3n
+    - sensor.pws_weather_4d
+    - sensor.pws_weather_4n
+    - sensor.pws_alerts
+
+Weather Overview:
+  entities:
+    - sensor.pws_location
+    - sensor.pws_weather_1d
+    - sensor.pws_temp_f
+    - sensor.pws_feelslike_f
+    - sensor.pws_precip_1d_in
+    - sensor.pws_precip_1d
+    - sensor.pws_wind_mph
+    - sensor.pws_wind_1d_mph
+    - sensor.pws_temp_high_1d_f
+    # - sensor.pws_temp_high_record_f
+    - sensor.pws_temp_low_1d_f
+    # - sensor.pws_temp_low_record_f

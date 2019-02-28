@@ -1,0 +1,29 @@
+#RPI-RF Switches
+- platform: rpi_rf
+  gpio: 17
+  switches:
+    Desk Light:
+      pulselength: 180
+      code_on: 5248307
+      code_off: 5248316
+    Diningroom Light:
+      pulselength: 174
+      code_on: 5248451
+      code_off: 5248460
+    Kitchen Light:
+      pulselength: 174
+      code_on: 5248771
+      code_off: 5248780
+    Bed Light:
+      pulselength: 180
+      code_on: 5250307
+      code_off: 5250316
+    Outlet 5:
+      pulselength: 180
+      code_on: 5256451
+      code_off: 5256460
+
+#- platform: mqtt
+  #name: Livingroom Restart
+  #state_topic: 'livingroom/switch/livingroom_restart/state'
+  #command_topic: 'livingroom/switch/livingroom_restart/command'

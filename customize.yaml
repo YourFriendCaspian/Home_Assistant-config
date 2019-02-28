@@ -1,0 +1,63 @@
+sensor.temp:
+  icon: mdi:thermometer
+sensor.humidity:
+  icon: mdi:weather-rainy
+sensor.motion:
+  icon: mdi:run
+sensor.real_feel:
+  icon: mdi:thermometer
+sensor.lights:
+  icon: mdi:lightbulb-on-outline
+sensor.luv_shack_temp:
+  icon: mdi:thermometer
+sensor.luv_shack_humidity:
+  icon: mdi:weather-rainy
+binary_sensor.luv_shack_motion:
+  icon: mdi:run
+binary_sensor.luv_shack_motion_cam:
+  icon: mdi:run
+sensor.office_temperature:
+  icon: mdi:thermometer
+sensor.office_humidity:
+  icon: mdi:weather-rainy
+switch.desk_light:
+  icon: mdi:lightbulb-on-outline
+switch.diningroom_light:
+  icon: mdi:lightbulb-on-outline
+switch.kitchen_light:
+  icon: mdi:lightbulb-on-outline
+switch.bed_light:
+  icon: mdi:lightbulb-on-outline
+switch.outlet_5:
+  icon: mdi:lightbulb-on-outline
+sensor.basement_temp:
+  icon: mdi:thermometer
+sensor.basement_humidity:
+  icon: mdi:weather-rainy
+sensor.basement_motion:
+  icon: mdi:run
+sensor.basement_lights:
+  icon: mdi:lightbulb-on-outline
+sensor.ambient_temperature:
+  icon: mdi:thermometer
+  friendly_name: Temperature
+sensor.ambient_humidity:
+  icon: mdi:weather-rainy
+  friendly_name: Humidity
+sensor.ambient_pressure:
+  icon: mdi:gauge
+  friendly_name: Pressure
+sensor.temperatureandhumidity_1_0:
+  friendly_name: Humidity
+sensor.temperatureandhumidity_1_1:
+  friendly_name: Temperature
+binary_sensor.basement_door:
+  icon: mdi:door-open
+zone.home:
+  icon: mdi:home-assistant
+sensor.temperatureandhumidity_4_4:
+  friendly_name: Humidity
+sensor.temperatureandhumidity_4_5:
+  friendly_name: Temperature
+sensor.soil_moisture_sensor_reve_6_0:
+  friendly_name: Tree Moisture
