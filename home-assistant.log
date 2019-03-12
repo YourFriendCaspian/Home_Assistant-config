@@ -11015,3 +11015,68 @@ jsonrpc_base.jsonrpc.TransportError: ("Error calling method 'Player.GetActivePla
 2019-03-12 16:44:05 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.wunderground
 2019-03-12 16:44:05 ERROR (MainThread) [homeassistant.components.sensor.wunderground] Check WUnderground API ('this key is not valid due to exceeding rate plan',)
 2019-03-12 16:44:05 WARNING (MainThread) [homeassistant.components.sensor] Platform wunderground not ready yet. Retrying in 180 seconds.
+2019-03-12 16:44:47 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.basement_humidity is taking over 10 seconds
+2019-03-12 16:45:08 WARNING (MainThread) [homeassistant.components.sensor] Updating dht sensor took longer than the scheduled update interval 0:00:30
+2019-03-12 16:45:46 DEBUG (MainThread) [homeassistant.components.device_tracker.tile] Updating Tile data
+2019-03-12 16:46:20 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.basement_temperature is taking over 10 seconds
+2019-03-12 16:46:41 WARNING (MainThread) [homeassistant.components.sensor] Updating dht sensor took longer than the scheduled update interval 0:00:30
+2019-03-12 16:47:06 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.wunderground
+2019-03-12 16:47:06 ERROR (MainThread) [homeassistant.components.sensor.wunderground] Check WUnderground API ('this key is not valid due to exceeding rate plan',)
+2019-03-12 16:47:06 WARNING (MainThread) [homeassistant.components.sensor] Platform wunderground not ready yet. Retrying in 180 seconds.
+2019-03-12 16:47:46 DEBUG (MainThread) [homeassistant.components.device_tracker.tile] Updating Tile data
+2019-03-12 16:47:53 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.basement_humidity is taking over 10 seconds
+2019-03-12 16:48:14 WARNING (MainThread) [homeassistant.components.sensor] Updating dht sensor took longer than the scheduled update interval 0:00:30
+2019-03-12 16:49:26 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.basement_temperature is taking over 10 seconds
+2019-03-12 16:49:47 DEBUG (MainThread) [homeassistant.components.device_tracker.tile] Updating Tile data
+2019-03-12 16:49:47 WARNING (MainThread) [homeassistant.components.sensor] Updating dht sensor took longer than the scheduled update interval 0:00:30
+2019-03-12 16:50:07 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.wunderground
+2019-03-12 16:50:07 ERROR (MainThread) [homeassistant.components.sensor.wunderground] Check WUnderground API ('this key is not valid due to exceeding rate plan',)
+2019-03-12 16:50:07 WARNING (MainThread) [homeassistant.components.sensor] Platform wunderground not ready yet. Retrying in 180 seconds.
+2019-03-12 16:50:59 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.basement_humidity is taking over 10 seconds
+2019-03-12 16:51:20 WARNING (MainThread) [homeassistant.components.sensor] Updating dht sensor took longer than the scheduled update interval 0:00:30
+2019-03-12 16:51:48 DEBUG (MainThread) [homeassistant.components.device_tracker.tile] Updating Tile data
+2019-03-12 16:52:32 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.basement_temperature is taking over 10 seconds
+2019-03-12 16:52:53 WARNING (MainThread) [homeassistant.components.sensor] Updating dht sensor took longer than the scheduled update interval 0:00:30
+2019-03-12 16:53:08 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.wunderground
+2019-03-12 16:53:08 ERROR (MainThread) [homeassistant.components.sensor.wunderground] Check WUnderground API ('this key is not valid due to exceeding rate plan',)
+2019-03-12 16:53:08 WARNING (MainThread) [homeassistant.components.sensor] Platform wunderground not ready yet. Retrying in 180 seconds.
+2019-03-12 16:53:12 DEBUG (MainThread) [homeassistant.components.mqtt] Received message on owntracks/yfc/OnePlusTech: b'{"_type":"lwt","tst":1552423982}'
+2019-03-12 16:53:12 DEBUG (MainThread) [homeassistant.components.device_tracker.owntracks] Received {'topic': 'owntracks/yfc/OnePlusTech', 'tst': 1552423982, '_type': 'lwt'}
+2019-03-12 16:53:12 DEBUG (MainThread) [homeassistant.components.device_tracker.owntracks] Not handling lwt message: {'topic': 'owntracks/yfc/OnePlusTech', 'tst': 1552423982, '_type': 'lwt'}
+2019-03-12 16:53:12 DEBUG (MainThread) [homeassistant.components.device_tracker.owntracks] Received {'topic': 'owntracks/yfc/OnePlusTech', 'tst': 1552423982, '_type': 'lwt'}
+2019-03-12 16:53:12 DEBUG (MainThread) [homeassistant.components.device_tracker.owntracks] Not handling lwt message: {'topic': 'owntracks/yfc/OnePlusTech', 'tst': 1552423982, '_type': 'lwt'}
+2019-03-12 16:53:49 DEBUG (MainThread) [homeassistant.components.device_tracker.tile] Updating Tile data
+2019-03-12 16:54:05 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.basement_humidity is taking over 10 seconds
+2019-03-12 16:54:26 WARNING (MainThread) [homeassistant.components.sensor] Updating dht sensor took longer than the scheduled update interval 0:00:30
+2019-03-12 16:55:38 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.basement_temperature is taking over 10 seconds
+2019-03-12 16:55:50 DEBUG (MainThread) [homeassistant.components.device_tracker.tile] Updating Tile data
+2019-03-12 16:55:59 WARNING (MainThread) [homeassistant.components.sensor] Updating dht sensor took longer than the scheduled update interval 0:00:30
+2019-03-12 16:56:09 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.wunderground
+2019-03-12 16:56:09 ERROR (MainThread) [homeassistant.components.sensor.wunderground] Check WUnderground API ('this key is not valid due to exceeding rate plan',)
+2019-03-12 16:56:09 WARNING (MainThread) [homeassistant.components.sensor] Platform wunderground not ready yet. Retrying in 180 seconds.
+2019-03-12 16:57:11 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.basement_temperature is taking over 10 seconds
+2019-03-12 16:57:32 WARNING (MainThread) [homeassistant.components.sensor] Updating dht sensor took longer than the scheduled update interval 0:00:30
+2019-03-12 16:57:51 DEBUG (MainThread) [homeassistant.components.device_tracker.tile] Updating Tile data
+2019-03-12 16:58:44 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.basement_humidity is taking over 10 seconds
+2019-03-12 16:59:05 WARNING (MainThread) [homeassistant.components.sensor] Updating dht sensor took longer than the scheduled update interval 0:00:30
+2019-03-12 16:59:10 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.wunderground
+2019-03-12 16:59:10 ERROR (MainThread) [homeassistant.components.sensor.wunderground] Check WUnderground API ('this key is not valid due to exceeding rate plan',)
+2019-03-12 16:59:10 WARNING (MainThread) [homeassistant.components.sensor] Platform wunderground not ready yet. Retrying in 180 seconds.
+2019-03-12 16:59:52 DEBUG (MainThread) [homeassistant.components.device_tracker.tile] Updating Tile data
+2019-03-12 17:00:00 DEBUG (Thread-16) [homeassistant.components.sensor.speedtest] Executing speedtest...
+2019-03-12 17:00:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.basement_temperature is taking over 10 seconds
+2019-03-12 17:00:38 WARNING (MainThread) [homeassistant.components.sensor] Updating dht sensor took longer than the scheduled update interval 0:00:30
+2019-03-12 17:01:50 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.basement_humidity is taking over 10 seconds
+2019-03-12 17:01:53 DEBUG (MainThread) [homeassistant.components.device_tracker.tile] Updating Tile data
+2019-03-12 17:02:11 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.wunderground
+2019-03-12 17:02:11 WARNING (MainThread) [homeassistant.components.sensor] Updating dht sensor took longer than the scheduled update interval 0:00:30
+2019-03-12 17:02:11 ERROR (MainThread) [homeassistant.components.sensor.wunderground] Check WUnderground API ('this key is not valid due to exceeding rate plan',)
+2019-03-12 17:02:11 WARNING (MainThread) [homeassistant.components.sensor] Platform wunderground not ready yet. Retrying in 180 seconds.
+2019-03-12 17:03:23 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.basement_humidity is taking over 10 seconds
+2019-03-12 17:03:44 WARNING (MainThread) [homeassistant.components.sensor] Updating dht sensor took longer than the scheduled update interval 0:00:30
+2019-03-12 17:03:54 DEBUG (MainThread) [homeassistant.components.device_tracker.tile] Updating Tile data
+2019-03-12 17:04:56 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.basement_humidity is taking over 10 seconds
+2019-03-12 17:05:12 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.wunderground
+2019-03-12 17:05:12 ERROR (MainThread) [homeassistant.components.sensor.wunderground] Check WUnderground API ('this key is not valid due to exceeding rate plan',)
+2019-03-12 17:05:12 WARNING (MainThread) [homeassistant.components.sensor] Platform wunderground not ready yet. Retrying in 180 seconds.
+2019-03-12 17:05:17 WARNING (MainThread) [homeassistant.components.sensor] Updating dht sensor took longer than the scheduled update interval 0:00:30
