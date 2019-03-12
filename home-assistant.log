@@ -11080,3 +11080,6 @@ jsonrpc_base.jsonrpc.TransportError: ("Error calling method 'Player.GetActivePla
 2019-03-12 17:05:12 ERROR (MainThread) [homeassistant.components.sensor.wunderground] Check WUnderground API ('this key is not valid due to exceeding rate plan',)
 2019-03-12 17:05:12 WARNING (MainThread) [homeassistant.components.sensor] Platform wunderground not ready yet. Retrying in 180 seconds.
 2019-03-12 17:05:17 WARNING (MainThread) [homeassistant.components.sensor] Updating dht sensor took longer than the scheduled update interval 0:00:30
+2019-03-12 17:05:55 DEBUG (MainThread) [homeassistant.components.device_tracker.tile] Updating Tile data
+2019-03-12 17:06:29 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.basement_humidity is taking over 10 seconds
+2019-03-12 17:06:50 WARNING (MainThread) [homeassistant.components.sensor] Updating dht sensor took longer than the scheduled update interval 0:00:30
