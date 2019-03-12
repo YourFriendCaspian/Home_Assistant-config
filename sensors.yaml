@@ -33,24 +33,33 @@
 
 ####  Office Sensor   ####
 
-- platform: bme280
-  name: Ambient
-  i2c_address: 0x76
-  operation_mode: 2  # forced mode
-  time_standby: 5
-  oversampling_temperature: 4
-  oversampling_pressure: 4
-  oversampling_humidity: 4
-  delta_temperature: -0.5
+#- platform: bme280
+  #name: Ambient
+  #i2c_address: 0x76
+  #operation_mode: 2  # forced mode
+  #time_standby: 5
+  #oversampling_temperature: 4
+  #oversampling_pressure: 4
+  #oversampling_humidity: 4
+  #delta_temperature: -0.5
+  #monitored_conditions:
+    #- temperature
+    #- humidity
+    #- pressure
+  #scan_interval: 40
+
+- platform: dht
+  name: office
+  sensor: DHT22
+  pin: 5
+  temperature_offset: 2.1
+  humidity_offset: -3.2
   monitored_conditions:
     - temperature
     - humidity
-    - pressure
-  scan_interval: 40
+
 
 ####  Master Bedroom  ####
-
-
 
 
 ####  Bruh MultiSensor  ####
@@ -88,7 +97,7 @@
   #availability_topic: 'livingroom/status'
   #payload_available: 'online'
   #payload_not_available: 'offline'
-  
+
 #- platform: mqtt
   #name: 'Livingroom Wifi'
   #state_topic: 'livingroom/sensor/livingroom_wifi_signal/state'
@@ -285,7 +294,7 @@
   # name: 'Luv Shack Motion'
   # state_topic: 'luvshack/pisensor'
   # value_template: '{{ value_json.motion }}'
-  
+
 ####  ShadyCam Motion  ####
 
 # - platform: mqtt

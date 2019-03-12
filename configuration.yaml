@@ -15,7 +15,7 @@ homeassistant:
 
 customizer:
   custom_ui: local
-  
+
 # Show links to resources in log and frontend
 introduction:
 
@@ -102,7 +102,7 @@ mysensors:
     - device: '/dev/ttyUSB020'
       persistence_file: '/home/homeassistant/.homeassistant/mysensors.json'
   version: '2.0'
-    
+
 mqtt:
   broker: 192.168.1.142
   port: 1883
@@ -110,7 +110,7 @@ mqtt:
   password: !secret mqtt_password
   discovery: true
   discovery_prefix: shadyoak
- 
+
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
@@ -125,7 +125,7 @@ panel_iframe:
   ide:
     title: Web Terminal
     icon: mdi:code-braces
-    url: 'https://shadyoak.duckdns.org:4200'
+    url: 'http://shadyoak.duckdns.org:4200'
   manager:
     title: HA Manager
     icon: mdi:code-braces

@@ -21,5 +21,6 @@ known_devices.yaml
 
 # Ignored Folders. #
 .storage
+.storage/*
 .cloud
 .google.token

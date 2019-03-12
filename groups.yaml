@@ -82,9 +82,9 @@ date_card:
 office_card:
   name: 'Office'
   entities:
-    - sensor.ambient_temperature
-    - sensor.ambient_humidity
-    - sensor.ambient_pressure
+    - sensor.office_temperature
+    - sensor.office_humidity
+    #- sensor.ambient_pressure
     - binary_sensor.office_motion
 
 livingroom_card:
@@ -102,7 +102,7 @@ livingroom_card:
 basement_card:
   name: 'Basement'
   entities:
-    - sensor.basement_temp
+    - sensor.basement_temperature
     - sensor.basement_humidity
     - sensor.basement_light
     - binary_sensor.basement_motion
